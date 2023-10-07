@@ -1,0 +1,200 @@
+.chatBox {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 120px);
+  padding: 50px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  .cont-mi_mensaje {
+    display: flex;
+    flex-direction: row;
+    .mi_mensaje {
+      justify-content: flex-end;
+      position: relative;
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      margin: 5px 0;
+      & p {
+        position: relative;
+        right: 0;
+        text-align: left;
+        max-width: 65%;
+        padding: 12px;
+        background: $secondary-background-color;
+        border-radius: 10px;
+        font-size: 0.9em;
+        color: $tertiary-color;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -12px;
+          width: 20px;
+          height: 20px;
+          background: linear-gradient(
+            225deg,
+            $secondary-background-color 0%,
+            $secondary-background-color 50%,
+            transparent 50%,
+            transparent
+          );
+        }
+
+        & span {
+          display: block;
+          margin-top: 5px;
+          font-size: 0.85em;
+          opacity: 0.5;
+        }
+      }
+
+      .menu-mi_mensaje {
+        height: 90px;
+        margin-left: 10px;
+        margin-top: -30px;
+        background: $secondary-background-color;
+
+        justify-content: flex-end;
+        display: none;
+
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        margin: 0, 0, 0, 100%;
+        ul {
+          width: 100%;
+          list-style: none;
+        }
+        li {
+          margin-bottom: 5px;
+          button {
+            height: 30px;
+            font-size: 15px;
+            border: none;
+            color: #ffffff;
+            width: 100%;
+            text-align: center;
+            background: none;
+          }
+          button:hover {
+            background: $tertiary-background-color;
+            width: 100%;
+          }
+        }
+      }
+
+      .button-mi_mensaje {
+        display: none;
+        border: none;
+        background: $secondary-background-color;
+      }
+      .button-mi_mensaje ion-icon {
+        font-size: 20px;
+        color: #ffffff;
+      }
+
+      p:hover .button-mi_mensaje {
+        display: inline-block;
+      }
+    }
+  }
+
+  ///su mensaje mesaje enviado
+  .cont-su_mensaje {
+    display: flex;
+    flex-direction: row;
+    .su_mensaje {
+      justify-content: flex-end;
+      position: relative;
+      display: flex;
+      width: 100%;
+      margin: 5px 0;
+      & p {
+        position: relative;
+        right: 0;
+        text-align: right;
+        max-width: 65%;
+        padding: 12px;
+        background: $secondary-color;
+        border-radius: 10px;
+        font-size: 0.9em;
+        color: $tertiary-color;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -12px;
+          width: 20px;
+          height: 20px;
+          background: linear-gradient(
+            135deg,
+            $secondary-color 0%,
+            $secondary-color 50%,
+            transparent 50%,
+            transparent
+          );
+        }
+
+        & span {
+          display: block;
+          margin-top: 5px;
+          font-size: 0.85em;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    //su button
+
+    .menu-su_mensaje {
+      padding: 0;
+      height: 90px;
+      margin-left: 10px;
+      margin-top: -30px;
+      background: $secondary-color;
+      justify-content: flex-end;
+      display: none;
+
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      margin: 0, 0, 0, 100%;
+      ul {
+        width: 100%;
+        list-style: none;
+      }
+      li {
+        margin-bottom: 5px;
+        button {
+          height: 30px;
+          font-size: 15px;
+          border: none;
+          color: #ffffff;
+          width: 100%;
+          text-align: center;
+          background: none;
+        }
+        button:hover {
+          background: $tertiary-background-color;
+          width: 100%;
+        }
+      }
+    }
+    .button-su_mensaje {
+      display: none;
+      border: none;
+      background: $secondary-color;
+    }
+    .button-su_mensaje ion-icon {
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    /* Mostrar el botón e icono cuando se hace hover dentro del párrafo en .mi_mensaje */
+    p:hover .button-su_mensaje {
+      display: inline-block;
+    }
+  }
+}

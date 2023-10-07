@@ -1,0 +1,240 @@
+#img-modificador {
+  margin-top: -50px;
+}
+
+.boxSingnup {
+  position: relative;
+  width: 380px;
+  height: 750px;
+  background: $tertiary-background-color;
+  border-radius: 8px;
+  overflow: hidden;
+
+  /*animacion */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 600px;
+
+    background: linear-gradient(
+      0deg,
+      transparent,
+      transparent,
+      $primary-color,
+      $primary-color,
+      $primary-color
+    );
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+  }
+
+  &::after {
+    animation-delay: -3s;
+  }
+
+  .borderline {
+    position: absolute;
+    top: 0;
+    inset: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 600px;
+      background: linear-gradient(
+        0deg,
+        transparent,
+        transparent,
+        $secondary-color,
+        $secondary-color,
+        $secondary-color
+      );
+      z-index: 1;
+      transform-origin: bottom right;
+      animation: animate 6s linear infinite;
+    }
+
+    &::before {
+      animation-delay: -1.5s;
+    }
+
+    &::after {
+      animation-delay: -4.5s;
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /*fin animacion */
+}
+
+.boxSingnup form {
+  position: absolute;
+  inset: 4px;
+  background: $secondary-background-color;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-top: -10px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 5px $tertiary-color, 0 0 15px $tertiary-color,
+      0 0 30px $tertiary-color;
+  }
+
+  .inputBox {
+    position: relative;
+    width: 300px; /* Cambiamos el ancho a 100% para aprovechar el espacio disponible */
+    margin-top: 55px;
+    .invalid-feedback {
+      margin-top: -15px;
+      color: $primary-color;
+    }
+
+    input {
+      position: relative;
+      width: 100%;
+      padding: 20px 10px 10px;
+      background: transparent;
+      outline: none;
+      border: none;
+      box-shadow: none;
+      color: $tertiary-background-color;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+      z-index: 10;
+
+      &:valid,
+      &:focus {
+        & ~ .edit {
+          color: $tertiary-color;
+          font-size: 0.75em;
+          text-shadow: 0 0 5px $tertiary-color, 0 0 15px $tertiary-color;
+          transform: translateY(-34px);
+        }
+        & ~ .valid-feedback {
+          color: $tertiary-color;
+          font-size: 0.75em;
+          text-shadow: 0 0 5px $tertiary-color, 0 0 15px $tertiary-color;
+          transform: translateY(-20px);
+        }
+      }
+    }
+    #info {
+      resize: none;
+      position: relative;
+      width: 100%;
+      padding: 20px 10px 10px;
+      background: transparent;
+      outline: none;
+      border: none;
+      box-shadow: none;
+      color: $tertiary-background-color;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+      z-index: 10;
+      color: $tertiary-color;
+      text-shadow: 0 0 5px $tertiary-color, 0 0 15px $tertiary-color;
+
+      &:valid,
+      &:focus {
+        & ~ .edit {
+          margin-top: -5px;
+          color: $tertiary-color;
+          font-size: 0.75em;
+          text-shadow: 0 0 5px $tertiary-color, 0 0 15px $tertiary-color;
+          transform: translateY(-34px);
+        }
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+  }
+
+  i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $tertiary-color;
+
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+
+  input:valid ~ i,
+  input:focus ~ i {
+    height: 44px;
+  }
+  .enviar {
+    text-align: center;
+    color: $primary-color;
+    text-shadow: 0 0 5px $primary-color, 0 0 15px $primary-color;
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: $secondary-background-color;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 600;
+    font-weight: 100px;
+    width: 40%;
+    border-radius: 10px;
+    letter-spacing: 2px;
+
+    &:hover {
+      color: $tertiary-color;
+      text-shadow: 0 0 5px $tertiary-color, 0 0 15px $tertiary-color;
+      background-color: #ff00ff;
+      box-shadow: 0 0 5px $primary-color, 0 0 15px $primary-color,
+        0 0 30px $primary-color, 0 0 50px $primary-color;
+      transition-delay: 0.2s;
+    }
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  .input {
+    span {
+      position: absolute;
+      display: block;
+    }
+  }
+}

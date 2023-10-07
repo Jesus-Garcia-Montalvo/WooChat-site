@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>WowChat</title>
+  </head>
+  <body class="body">
+    <section class="container">
+      <aside class="container-izquierda">
+        <!--Barra usuario-->
+        <div class="header">
+          <div class="header-userImg">
+            <img
+              src="img/user.png"
+              class="cover imgUsuario"
+              id="abrirModalBtn"
+            />
+          </div>
+          <ul class="navIcons">
+            <li>
+              <ion-icon name="scan-circle-outline" class="icono"></ion-icon>
+            </li>
+            <li><ion-icon name="chatbox" class="icono"></ion-icon></li>
+            <li>
+              <ion-icon name="ellipsis-vertical" class="icono"></ion-icon>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Modal de Perfil-->
+        <div id="perfilModal" class="modal">
+          <div class="boxEditar">
+            <span class="borderline"></span>
+            <div class="from">
+              <span id="cerrarModal" class="modal-cerrar">&times;</span>
+              <h2 class="perfil">Perfil</h2>
+              <div class="imagenPerfilContainer">
+                <img id="imagenPerfil" src="" alt="Imagen de perfil" />
+              </div>
+              <label for="nuevaImagenUrl">Cambiar Imagen</label>
+              <input
+                class="inputusr"
+                type="text"
+                id="nuevaImagenUrl"
+                placeholder="URL de la nueva imagen"
+              />
+              <label for="nuevoNombre">Editar Nombre</label>
+              <input type="text" id="nuevoNombre" placeholder="Nuevo nombre" />
+              <br />
+              <button id="cambiarImagenBtn">Cambiar</button>
+            </div>
+          </div>
+        </div>
+
+        <!--Buscador-->
+        <div class="buscarChat">
+          <div>
+            <input
+              type="text"
+              id="buscarInput"
+              placeholder="Busca un chat o inicia uno nuevo."
+            />
+            <ion-icon
+              name="search-outline"
+              class="icono"
+              id="buscarIcono"
+            ></ion-icon>
+          </div>
+        </div>
+        <!--Lista de chats-->
+        <div class="listaChats">
+          <!--<div class="listaChats-bloque active" data-id="1">
+            <div class="imgContenedor">
+              <img src="img/user.png" class="cover" />
+            </div>
+            <div class="detallesChat">
+              <div class="detallesChat-lista">
+                <h4>Usuario Uno</h4>
+                <p class="detallesChat-lista-hora">5:20</p>
+              </div>
+              <div class="detallesChat-mensaje">
+                <p>Mensaje de prueba.</p>
+              </div>
+            </div>
+          </div>-->
+
+          <!--<div class="listaChats-bloque" data-id="2">
+            <div class="imgContenedor">
+              <img src="img/user.png" class="cover" />
+            </div>
+            <div class="detallesChat">
+              <div class="detallesChat-lista">
+                <h4>Usuario Dos</h4>
+                <p class="detallesChat-lista-hora sinLeer">5:20</p>
+              </div>
+              <div class="detallesChat-mensaje">
+                <p>Mensaje de prueba más largo.</p>
+                <b>2</b>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </aside>
+      <aside class="container-derecha">
+        <div class="header">
+          <button class="flechaBack">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <div class="imagenTexto">
+            <div class="header-userImg">
+              <img src="img/user.png" class="cover" />
+            </div>
+            <h4><br /><span class="span"></span></h4>
+          </div>
+          <ul class="navIcons">
+            <li>
+              <ion-icon
+                name="search-outline"
+                class="icono buscarMensajes"
+              ></ion-icon>
+            </li>
+            <li>
+              <ion-icon name="ellipsis-vertical" class="icono"></ion-icon>
+            </li>
+          </ul>
+        </div>
+
+        <!--Chat-->
+        <div class="chatBox">
+          <div class="">
+            <p>
+              <br />
+              <span></span>
+            </p>
+          </div>
+          <div class="">
+            <p>
+              <br />
+              <span></span>
+            </p>
+          </div>
+        </div>
+
+        <!--Chat input-->
+        <div class="chatbox-input">
+          <ion-icon name="happy-outline" id="icono"></ion-icon>
+          <ion-icon name="attach-outline" id="icono"></ion-icon>
+          <input type="text" placeholder="Escribe un mensaje." />
+          <ion-icon name="mic" id="icono"></ion-icon>
+          <button id="botonEnviar" class="btn-neon">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+            <samp id="span4"></samp>
+            <p>Enviar</p>
+          </button>
+        </div>
+      </aside>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/postMessages.js"></script>
+    <script src="scripts/mostrarMenu.js"></script>
+    <script src="scripts/btnAlert.js"></script>
+  </body>
+</html>

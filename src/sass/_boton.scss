@@ -1,0 +1,111 @@
+.btn-neon {
+  margin-left: 15px;
+  text-align: center;
+  background: $secondary-background-color;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  padding: 9px 25px;
+  color: $primary-color;
+  text-shadow: 0 0 5px $primary-color, 0 0 10px $primary-color;
+  width: 110px;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 18px;
+  border-radius: 7px;
+  transition: 0.1s;
+  border: 0;
+}
+
+.btn-neon:hover {
+  color: $tertiary-color;
+  background: $primary-color;
+  box-shadow: 0 0 10px $primary-color, 0 0 20px $primary-color,
+    0 0 30px $primary-color;
+  transition-delay: 1s;
+}
+
+.btn-neon span {
+  position: absolute;
+  display: block;
+}
+#span1 {
+  top: 0;
+  left: -100px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, $primary-color);
+}
+
+.btn-neon:hover #span1 {
+  left: 100%;
+  transition: 1s;
+}
+
+#span3 {
+  bottom: 0;
+  right: -100px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, $primary-color);
+}
+
+.btn-neon:hover #span3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#span2 {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, $primary-color);
+}
+
+.btn-neon:hover #span2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+#span4 {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, $primary-color);
+}
+
+.btn-neon:hover #span4 {
+  left: -100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+/*.btn-neon {
+  position: relative;
+  display: inline-block;
+  letter-spacing: 2px;
+  padding: 9px 25px;
+  color: $tertiary-color;
+  text-decoration: none;
+  overflow: hidden;
+  font-size: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  width: 100px;
+  transition: 0.2s;
+  box-shadow: 0 0 10px $primary-color, 0 0 20px $primary-color;
+}
+
+
+ <a href="" class="btn-neon">
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+          <samp id="span4"></samp>
+          Login
+        </a>
+
+        */

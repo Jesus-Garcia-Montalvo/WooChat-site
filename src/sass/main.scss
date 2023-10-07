@@ -1,0 +1,12 @@
+@import "config";
+@import "login";
+@import "singnup";
+@import "alert";
+@import "home";
+@import "boton";
+@import "conversacion";
+@import "modalEditar";
+
+body {
+  font-family: $font-family;
+}

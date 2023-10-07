@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WowChat</title>
+    <!-- Agregado un enlace a tu archivo de estilos CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <img src="img/img1.png" alt="" id="img-modificador" />
+    <div class="boxSingnup">
+      <span class="borderline"></span>
+      <form class="needs-validation" id="userForm" novalidate>
+        <h2>Crea una cuenta</h2>
+        <div class="inputBox form-group">
+          <input type="text" name="nombre" id="nombre" required />
+          <span class="valid-feedback" style="display: none">¡Se ve bien!</span>
+          <span class="invalid-feedback" style="display: none"
+            >Proporcione un nombre válido.</span
+          >
+          <span class="edit"> Nombre </span>
+          <i></i>
+        </div>
+        <div class="inputBox form-group">
+          <input
+            type="number"
+            name="numero_usuario"
+            id="numero_usuario"
+            required
+          />
+          <span class="valid-feedback" style="display: none">¡Se ve bien!</span>
+          <span class="invalid-feedback" style="display: none"
+            >Por favor Proporcione un número de teléfono válido.</span
+          >
+          <!-- Cambiado el mensaje de error -->
+          <span class="edit">Teléfono</span>
+          <i></i>
+        </div>
+
+        <div class="inputBox form-group">
+          <input type="password" name="contraseña" id="contraseña" required />
+          <span class="valid-feedback" style="display: none">¡Se ve bien!</span>
+          <span class="invalid-feedback" style="display: none"
+            >Proporcione una contraseña válida.</span
+          >
+          <!-- Cambiado el mensaje de error -->
+          <span class="edit">Contraseña</span>
+          <i></i>
+          <span id="text"></span>
+        </div>
+        <div class="inputBox form-group">
+          <input type="text" name="url" id="url" required="required" />
+          <span class="valid-feedback" style="display: none">¡Se ve bien!</span>
+          <span class="invalid-feedback" style="display: none"
+            >Proporcione un avatar válido.</span
+          >
+          <!-- Cambiado el mensaje de error -->
+          <span class="edit">Avatar</span>
+          <i></i>
+        </div>
+        <div class="inputBox form-group">
+          <textarea id="info" name="info" required></textarea>
+          <span class="edit">Info</span>
+          <i></i>
+        </div>
+        <br />
+        <div class="form-group">
+          <button type="submit" value="Signup" class="enviar">Crear</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="scripts/validation.js"></script>
+  <script src="scripts/v_singnup.js"></script>
+</html>
